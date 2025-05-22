@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waulenss Coffee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><span>Waulenss</span>Coffee<span>.</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <div class="search-icon" onclick="toggleSearch()">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+        <!-- Search Form -->
+        <div class="search-form">
+            <input type="text" placeholder="Cari produk...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+     
+              <div class="hero-content">
+            <h1>Mari Nikmati <br><span>Secangkir</span> <span class="highlight">Kopi</span></h1>
+            <p>Untuk kamu yang mau citra strong, elegan, dan punya karakter berani — cocok banget buat kopi yang strong dan berkelas.</p>
+            <a href="menu.html" class="btn">Beli Sekarang</a>
+            
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <div class="container">
+            <h2>Produk Unggulan</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="assets/Kopi Tubruk - Arabica Aceh Gayo in a Cup.jpeg" alt="Kopi Arabica">
+                    <h3>Kopi Arabica</h3>
+                    <p>Rp 35.000</p>
+                    <button class="add-to-cart" onclick="addToCart('Kopi Arabica', 35000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/download.jpeg" alt="Kopi Robusta">
+                    <h3>Kopi Robusta</h3>
+                    <p>Rp 30.000</p>
+                    <button class="add-to-cart" onclick="addToCart('Kopi Robusta', 30000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/45c29dc0-1db6-40a9-a17b-f0237303680d.jpeg" alt="Kopi Luwak">
+                    <h3>Kopi Luwak</h3>
+                    <p>Rp 50.000</p>
+                    <button class="add-to-cart" onclick="addToCart('Kopi Luwak', 50000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <h2>Tentang WaulenssCoffe.</h2>
+                <p>Waulens Coffee adalah perpaduan sempurna antara cita rasa kopi premium dan nuansa hangat yang memanjakan. Terinspirasi dari aroma kopi yang menenangkan, Waulens hadir untuk menjadi tempat persinggahan terbaik di tengah rutinitasmu. Kami menyajikan setiap cangkir dengan cinta, untuk pecinta kopi sejati..</p>
+                <a href="tentang.html" class="btn">Selengkapnya</a>
+            </div>
+            <div class="about-image">
+                <img src="assets/logo .jpg" alt="Tentang Kami">
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total-price">Rp 0</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html"><span>Waulenss</span>Coffee<span>.</span></a>
+                    <p>Mari nikmati secangkir kopi bersama kami.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Cimuncang No.50 Bandung</p>
+                    <p><i class="fas fa-phone"></i> +62 896 6931 0736</p>
+                    <p><i class="fas fa-envelope"></i> Waulenss@gmail.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Sosial Media</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/waulens_coffee/?igsh=ejk3Ymw1eGhvNnNl#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 WaulenssCoffe. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <style>
+
+    /* Hero Section */
+.hero {
+    background-image:  url('assets/bg new.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    font-weight: 300;
+}
+
+.hero h1 .highlight {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+</style>
+    <script>
+        // Toggle search form
+        function toggleSearch() {
+            const searchForm = document.querySelector('.search-form');
+            searchForm.classList.toggle('active');
+        }
+
+        // Shopping cart functionality
+        let cartItems = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        function toggleCart() {
+            const cartSidebar = document.querySelector('.cart-sidebar');
+            const overlay = document.querySelector('.overlay');
+            cartSidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function addToCart(name, price) {
+            // Check if item already exists in cart
+            const existingItem = cartItems.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cartItems.push({
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const cartCountElement = document.querySelector('.cart-count');
+            const cartTotalElement = document.getElementById('cart-total-price');
+            
+            // Clear cart items container
+            cartItemsContainer.innerHTML = '';
+            
+            // Reset cart count and total
+            cartCount = 0;
+            cartTotal = 0;
+            
+            // Add items to cart
+            cartItems.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                
+                cartItem.innerHTML = `
+                    <div class="item-details">
+                        <h4>${item.name}</h4>
+                        <p>Rp ${item.price.toLocaleString()}</p>
+                        <div class="item-quantity">
+                            <button onclick="decreaseQuantity(${index})">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="increaseQuantity(${index})">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item" onclick="removeFromCart(${index})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                
+                cartItemsContainer.appendChild(cartItem);
+                
+                cartCount += item.quantity;
+                cartTotal += item.price * item.quantity;
+            });
+            
+            // Update cart count and total
+            cartCountElement.textContent = cartCount;
+            cartTotalElement.textContent = `Rp ${cartTotal.toLocaleString()}`;
+            
+            // Show empty cart message if no items
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart">Keranjang belanja kosong</p>';
+            }
+        }
+
+        function increaseQuantity(index) {
+            cartItems[index].quantity += 1;
+            updateCart();
+        }
+
+        function decreaseQuantity(index) {
+            if (cartItems[index].quantity > 1) {
+                cartItems[index].quantity -= 1;
+            } else {
+                removeFromCart(index);
+            }
+            updateCart();
+        }
+    </script>
+</body>
+</html>
